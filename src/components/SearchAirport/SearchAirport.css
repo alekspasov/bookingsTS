@@ -1,4 +1,4 @@
-/* Style for search bar */
+
 .searchBar {
     position: relative;
     width: 100%;
@@ -6,7 +6,6 @@
   }
   
   .searchBar input[type="search"] {
-    /* Adjusted width to accommodate the show button */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -21,40 +20,23 @@
       outline: none;
   }
   
-  /* Style for show button */
   #show-all-airports {
-    /* width: auto;
-    height: auto;
-    position: relative;
-    top: 0;
-    right: 0;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-      margin-left: 10px;
-    display: flex;
-    align-items: center;
-    font-size: small; */
     width: 15%;
     background-color: #365cf4;
     color: white;
     border: none;
     padding: 15px;
     border-radius: 10px;
-    /* border-radius: 5px; */
     cursor: pointer;
     margin-left: 10px;
     text-align: center;
   }
   
-  /* Style for airports list */
   .airports {
     position: relative;
-    top: 5; /* Positioned just below the search input */
+    top: 5; 
     left: 0;
-    z-index: 0; /* To ensure it appears above other elements */
+    z-index: 0; 
     width: 100%;
     max-height: 200px;
     overflow-y: auto;

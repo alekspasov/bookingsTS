@@ -41,7 +41,6 @@ const SearchAirport = ({
     const searchedAirports = airports.filter((airport) =>
       airport.title?.toLowerCase().includes(chosenAirport)
     );
-    console.log(searchedAirports);
     setSearchedAirports(searchedAirports);
   };
 
@@ -50,7 +49,6 @@ const SearchAirport = ({
       if (!booking.departureAirportId) {
         setChosenAirport(title);
         setBooking({ ...booking, departureAirportId: id });
-        console.log(booking.departureAirportId);
         setSearchedAirports([]);
         return;
       }

@@ -166,7 +166,7 @@ const BookingForm = () => {
           setLatestBooking={setLatestBooking}
           showBooking={showBooking}
           setShowBooking={setShowBooking}
-          displayText={"Are you sure you want to create this booking?"}
+          displayText="Are you sure you want to create this booking?"
         />
       )}
     </>

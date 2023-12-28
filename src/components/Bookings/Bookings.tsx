@@ -23,7 +23,6 @@ const Bookings = () => {
   useEffect(() => {
     if (showBookings) {
       setShowLoader(!showLoader)
-      console.log(index);
       getAllBookings().then((response) =>{
         setBookings(response);
         setIndex(1);
@@ -41,7 +40,6 @@ const Bookings = () => {
     try {
       const newBookings = await getAllBookings(index);
       setBookings((prevBookings) => [...prevBookings, ...newBookings]);
-      console.log(bookings);
     } catch (err) {
       console.log(err);
     }
@@ -58,7 +56,6 @@ const Bookings = () => {
         fetchData();
       }
     };
-    console.log(index);
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);

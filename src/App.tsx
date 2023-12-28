@@ -10,7 +10,7 @@ import { AirportType } from "./common/types.ts";
 
 type AirportsArr = AirportType[];
 
-function App() {
+const App = () => {
   const [airports, setAirports] = useState<AirportsArr>([]);
 
   const [showBookings, setShowBookings] = useState(true);
@@ -28,10 +28,10 @@ function App() {
     <>
       <AppState.Provider
         value={{
-          airports: airports,
-          setAirports: setAirports,
-          showBookings: showBookings,
-          setShowBookings: setShowBookings,
+          airports,
+          setAirports,
+          showBookings,
+          setShowBookings,
         }}
       >
         {loading ? (

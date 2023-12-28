@@ -13,7 +13,7 @@ interface BookingInterface {
 }
 
 const Booking = ({ booking, setIndex }: BookingInterface) => {
-  const { airports, showBookings, setShowBookings } = useContext(AppState);
+  const { airports, setShowBookings } = useContext(AppState);
   const [departureAirport] = useState(
     airports?.find((airport) => airport.id === booking.departureAirportId)
   );
@@ -27,7 +27,6 @@ const Booking = ({ booking, setIndex }: BookingInterface) => {
 
   useEffect(() => {
     if (remove) {
-      console.log(showBookings);
       deleteBooking(booking.id as number).then(() => {
         setRemove(!remove);
         setShowBookings(true);

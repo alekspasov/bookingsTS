@@ -40,7 +40,6 @@ const AlertModal: React.FC<AlertModalInterface> = ({
     e.preventDefault();
     if (displayText.includes("create")) {
       setCreating(!creating);
-      console.log("test");
 
       return;
     }
@@ -52,8 +51,6 @@ const AlertModal: React.FC<AlertModalInterface> = ({
 
   useEffect(() => {
     if (creating) {
-      console.log("create");
-      console.log(booking);
       if (booking) {
         createNewBooking(booking).then((response) => {
           setLatestBooking && setLatestBooking({ ...response });
