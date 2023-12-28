@@ -1,0 +1,6 @@
+:root{
+  overflow: scroll;
+  background-image: url('./assets/airplane-background.jpg');
+  background-size:cover;
+  background-attachment: fixed;
+}

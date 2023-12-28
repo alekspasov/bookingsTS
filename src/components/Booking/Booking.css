@@ -1,0 +1,131 @@
+/* Container */
+/* div {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+} */
+
+/* Span elements */
+/* span {
+    display: block; 
+} */
+
+/* Flight Information */
+/* span:nth-child(1) {
+    font-size: 24px; 
+    color: #333; 
+} */
+
+/* span:nth-child(2), span:nth-child(4), span:nth-child(6), span:nth-child(8) {
+   font-size: 18px; 
+   color:#555; 
+} */
+
+/* Airport Codes */
+/* span:nth-child(3), span:nth-child(5) {
+   font-size: 18px; 
+   color:#555; 
+   float:right;  
+} */
+
+/* Delete Button */
+/* button {
+   margin-top :10px;
+   padding :5px 10px ;
+   background-color :#f00 ;
+   color :#fff ;
+} */
+
+/* first version for the look */
+
+/* .booking {
+    width: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.booking-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+.airport-code {
+   font-size: 24px; 
+   font-weight:bold; 
+}
+
+.arrow {
+   font-size: 24px; 
+   margin-left :10px; 
+   margin-right :10px; 
+}
+
+.booking-info p {
+   margin-bottom :5px; 
+} */
+
+
+/* second version for the look */
+
+.booking {
+    width: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* transform: rotate(-10deg); */
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    background-color: rgba(237, 230, 230, 0.99);
+}
+
+.booking-header {
+    background-color: linear-gradient(to right, #00a2ff, #ffffff);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.airport-code {
+   font-size: 24px; 
+   font-weight:bold; 
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.arrow {
+   font-size: 24px; 
+   margin-left :10px; 
+   margin-right :10px; 
+   font-family: 'Courier New', Courier, monospace;
+}
+
+.booking-info p {
+   margin-bottom :5px;
+}
+
+.booking-info {
+    border-top: 1px dashed #ccc;
+}
+
+.dates{
+    display: flex;
+    gap: 10px;
+}
+
+.delete-booking{
+    width: 50%;
+    background-color: #F44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    display: block; 
+    margin: auto; 
+    text-align: center; 
+    
+}

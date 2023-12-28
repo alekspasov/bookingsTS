@@ -1,0 +1,158 @@
+
+
+/* .booking-form{
+  position:fixed;
+  top: 50px;
+  left: 300px;
+
+ 
+  z-index: 999
+ 
+} */
+
+/* Style for form controls */
+.form-control {
+    margin-bottom: 20px;
+   
+  }
+  
+  /* Style for labels */
+  .label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .label-text {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style for input fields */
+  input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* border-radius: 5px; */
+    border-radius:10px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Style for buttons */
+  .create-button {
+    width: 100%;
+    background-color: #365cf4;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    /* border-radius: 5px; */
+    cursor: pointer;
+  }
+  
+  /* Style for the journey options */
+  .journey-options {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .journey-option {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* border-radius: 5px; */
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .journey-option.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  /* Style for the airports info */
+  .airports-info {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .airports-info > div {
+    flex: 1;
+  }
+  
+  /* Style for the date info */
+  .date-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .date-info > div {
+    flex: 1;
+  }
+  
+  /* Style for the passengers info */
+  .passengers-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .passengers-info > div {
+    flex: 1;
+  }
+  
+  /* Style for the travel class info */
+  .travel-class-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .travel-class-info > div {
+    flex: 1;
+  }
+  
+  .travel-class-info select {
+    width: 80%;
+  }
+  
+.latest-booking-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.latest-booking {
+  margin-top: 20px;
+}
+
+/* .close-latest-booking {
+  border-radius: 25%;
+  border:solid 1px black;
+  cursor: pointer;
+  justify-content: center;
+} */
+
+.close-latest-booking {
+  width: 5%;
+  background-color: #F44336;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
+  text-align: center;
+
+}
+
+h2{
+  justify-content: center;
+  margin-bottom: 10px;
+}
