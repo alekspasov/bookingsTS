@@ -15,20 +15,19 @@ const Bookings = () => {
   const { showBookings, setShowBookings } = useContext(AppState);
   const [showLoader, setShowLoader] = useState(false);
 
-
-  useEffect(()=>{
-    getAllBookings().then(response=> setBookings(response));
-  },[])
+  useEffect(() => {
+    getAllBookings().then((response) => setBookings(response));
+  }, []);
 
   useEffect(() => {
     if (showBookings) {
-      setShowLoader(!showLoader)
-      getAllBookings().then((response) =>{
+      setShowLoader(!showLoader);
+      getAllBookings().then((response) => {
         setBookings(response);
         setIndex(1);
         setShowBookings(false);
-        setShowLoader(false)
-      }) ;
+        setShowLoader(false);
+      });
     }
   }, [showBookings]);
 
@@ -64,23 +63,21 @@ const Bookings = () => {
 
   return (
     <>
-
-    {showLoader ? <Loader />
-    :
-    <div id="bookings">
-    <h2 className="bookings-header">All Bookings</h2>
-    {bookings.map((booking) => {
-      return (
-        <div key={booking.id}>
-          <Booking booking={booking} setIndex={setIndex} />
+      {showLoader ? (
+        <Loader />
+      ) : (
+        <div id="bookings">
+          <h2 className="bookings-header">All Bookings</h2>
+          {bookings.map((booking) => {
+            return (
+              <div key={booking.id}>
+                <Booking booking={booking} setIndex={setIndex} />
+              </div>
+            );
+          })}
         </div>
-      );
-    })}
-  
-    </div>
-    }
+      )}
     </>
-  
   );
 };
 

@@ -43,19 +43,20 @@ const Booking = ({ booking, setIndex }: BookingInterface) => {
     if (booking && booking.departureDate && booking.returnDate) {
       setDepartureDate(dateFormat(booking.departureDate));
       setReturnDate(dateFormat(booking.returnDate));
-      setDepartureAirport(airports?.find((airport) => airport.id === booking.departureAirportId));
-      setArrivalAirport(airports?.find((airport) => airport.id === booking.arrivalAirportId))
+      setDepartureAirport(
+        airports?.find((airport) => airport.id === booking.departureAirportId)
+      );
+      setArrivalAirport(
+        airports?.find((airport) => airport.id === booking.arrivalAirportId)
+      );
     }
   }, [booking]);
 
   return (
     <>
-      {!booking ? 
-      
-      <Loader />
-      
-      :
-      (
+      {!booking ? (
+        <Loader />
+      ) : (
         <>
           <div className="booking">
             <div className="booking-header">

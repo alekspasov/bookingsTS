@@ -93,7 +93,7 @@ const BookingForm = () => {
               booking={booking}
               clearAirport={clearAirport}
               setClearAirport={setClearAirport}
-              airportType='departure'
+              airportType="departure"
             />
           </div>
           <div className="arrival-airport">
@@ -105,7 +105,7 @@ const BookingForm = () => {
               booking={booking}
               clearAirport={clearAirport}
               setClearAirport={setClearAirport}
-              airportType='arrival'
+              airportType="arrival"
             />
           </div>
         </div>

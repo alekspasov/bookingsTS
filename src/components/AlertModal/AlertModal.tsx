@@ -27,7 +27,7 @@ const AlertModal: React.FC<AlertModalInterface> = ({
   setLatestBooking,
   showBooking,
   setShowBooking,
-  setBooking
+  setBooking,
 }) => {
   const { setShowBookings } = useContext(AppState);
   const [creating, setCreating] = useState(false);
@@ -56,7 +56,7 @@ const AlertModal: React.FC<AlertModalInterface> = ({
       if (booking) {
         createNewBooking(booking).then((response) => {
           setLatestBooking && setLatestBooking({ ...response });
-          if(showBooking === false){
+          if (showBooking === false) {
             setShowBooking && setShowBooking(!showBooking);
           }
           setCreating(!creating);
