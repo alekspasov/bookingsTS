@@ -64,7 +64,7 @@ const Bookings = () => {
 
   return (
     <>
-    {/* // <div className="bookings-container"> */}
+
     {showLoader ? <Loader />
     :
     <div id="bookings">
@@ -79,7 +79,6 @@ const Bookings = () => {
   
     </div>
     }
-    {/* {isLoading ? <Loader /> : null} */}
     </>
   
   );

@@ -14,10 +14,10 @@ interface BookingInterface {
 
 const Booking = ({ booking, setIndex }: BookingInterface) => {
   const { airports, setShowBookings } = useContext(AppState);
-  const [departureAirport] = useState(
+  const [departureAirport, setDepartureAirport] = useState(
     airports?.find((airport) => airport.id === booking.departureAirportId)
   );
-  const [arrivalAirport] = useState(
+  const [arrivalAirport, setArrivalAirport] = useState(
     airports?.find((airport) => airport.id === booking.arrivalAirportId)
   );
   const [remove, setRemove] = useState(false);
@@ -43,6 +43,8 @@ const Booking = ({ booking, setIndex }: BookingInterface) => {
     if (booking && booking.departureDate && booking.returnDate) {
       setDepartureDate(dateFormat(booking.departureDate));
       setReturnDate(dateFormat(booking.returnDate));
+      setDepartureAirport(airports?.find((airport) => airport.id === booking.departureAirportId));
+      setArrivalAirport(airports?.find((airport) => airport.id === booking.arrivalAirportId))
     }
   }, [booking]);
 

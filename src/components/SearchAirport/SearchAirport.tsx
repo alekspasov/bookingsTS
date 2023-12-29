@@ -9,6 +9,7 @@ interface SearchAirportInterface {
   booking: BookingType;
   clearAirport: boolean;
   setClearAirport: (clearAirport: boolean) => void;
+  airportType: string;
 }
 
 const SearchAirport = ({
@@ -16,6 +17,7 @@ const SearchAirport = ({
   booking,
   clearAirport,
   setClearAirport,
+  airportType
 }: SearchAirportInterface) => {
   const { airports } = useContext(AppState);
 
@@ -46,15 +48,17 @@ const SearchAirport = ({
 
   const handleClick = (id: number, title: string) => {
     if (booking) {
-      if (!booking.departureAirportId) {
+      if (airportType==='departure') {
         setChosenAirport(title);
         setBooking({ ...booking, departureAirportId: id });
         setSearchedAirports([]);
         return;
       }
+      if(airportType==='arrival'){
       setChosenAirport(title);
       setBooking({ ...booking, arrivalAirportId: id });
       setSearchedAirports([]);
+      }
     }
   };
 

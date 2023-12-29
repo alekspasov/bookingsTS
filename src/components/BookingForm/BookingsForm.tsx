@@ -12,6 +12,8 @@ const BookingForm = () => {
   const [clearAirport, setClearAirport] = useState(false);
   const [latestBooking, setLatestBooking] = useState<BookingType>({});
   const [showBooking, setShowBooking] = useState(false);
+  console.log(booking);
+  console.log(latestBooking);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -93,6 +95,7 @@ const BookingForm = () => {
               booking={booking}
               clearAirport={clearAirport}
               setClearAirport={setClearAirport}
+              airportType='departure'
             />
           </div>
           <div className="arrival-airport">
@@ -104,6 +107,7 @@ const BookingForm = () => {
               booking={booking}
               clearAirport={clearAirport}
               setClearAirport={setClearAirport}
+              airportType='arrival'
             />
           </div>
         </div>
@@ -172,6 +176,7 @@ const BookingForm = () => {
           showBooking={showBooking}
           setShowBooking={setShowBooking}
           displayText="Are you sure you want to create this booking?"
+          setBooking={setBooking}
         />
       )}
     </>

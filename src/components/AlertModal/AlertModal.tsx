@@ -14,6 +14,7 @@ interface AlertModalInterface {
   showBooking?: boolean;
   setShowBooking?: (showBooking: boolean) => void;
   displayText: string;
+  setBooking?: (booking: BookingType) => void;
 }
 
 const AlertModal: React.FC<AlertModalInterface> = ({
@@ -26,6 +27,7 @@ const AlertModal: React.FC<AlertModalInterface> = ({
   setLatestBooking,
   showBooking,
   setShowBooking,
+  setBooking
 }) => {
   const { setShowBookings } = useContext(AppState);
   const [creating, setCreating] = useState(false);
@@ -60,6 +62,7 @@ const AlertModal: React.FC<AlertModalInterface> = ({
           setCreating(!creating);
           setShowModal && setShowModal(!showModal);
           setShowBookings(true);
+          setBooking && setBooking({});
         });
       }
     }
