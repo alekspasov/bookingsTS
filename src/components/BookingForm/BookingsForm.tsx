@@ -12,8 +12,6 @@ const BookingForm = () => {
   const [clearAirport, setClearAirport] = useState(false);
   const [latestBooking, setLatestBooking] = useState<BookingType>({});
   const [showBooking, setShowBooking] = useState(false);
-  console.log(booking);
-  console.log(latestBooking);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
