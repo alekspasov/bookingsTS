@@ -16,6 +16,11 @@ const BookingForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (booking && booking.firstName && booking.lastName) {
+      const regex = /^[a-zA-Z]+$/;
+      if (!regex.test(booking.firstName) || !regex.test(booking.lastName)) {
+        alert("Not a valid input");
+        throw new Error("Input is not a string");
+      }
       if (
         booking.firstName.length < MIN_NAME_LENGTH ||
         booking.firstName.length > MAX_NAME_LENGTH
