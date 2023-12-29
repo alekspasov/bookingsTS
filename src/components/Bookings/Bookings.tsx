@@ -63,7 +63,8 @@ const Bookings = () => {
   }, [fetchData]);
 
   return (
-    <div className="bookings-container">
+    <>
+    {/* // <div className="bookings-container"> */}
     {showLoader ? <Loader />
     :
     <div id="bookings">
@@ -75,13 +76,12 @@ const Bookings = () => {
         </div>
       );
     })}
-    
-  </div>
   
-    }
-    {isLoading && <Loader />}
-   
     </div>
+    }
+    {/* {isLoading ? <Loader /> : null} */}
+    </>
+  
   );
 };
 

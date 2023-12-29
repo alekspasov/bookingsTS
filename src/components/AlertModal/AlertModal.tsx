@@ -54,7 +54,9 @@ const AlertModal: React.FC<AlertModalInterface> = ({
       if (booking) {
         createNewBooking(booking).then((response) => {
           setLatestBooking && setLatestBooking({ ...response });
-          setShowBooking && setShowBooking(!showBooking);
+          if(showBooking === false){
+            setShowBooking && setShowBooking(!showBooking);
+          }
           setCreating(!creating);
           setShowModal && setShowModal(!showModal);
           setShowBookings(true);
