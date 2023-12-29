@@ -61,12 +61,11 @@ export const createNewBooking = async (
 
 export const deleteBooking = async (bookingId: number) => {
   try {
-    const response = await fetch(
+    await fetch(
       `${BASE_URL}/bookings/delete/${bookingId}?authToken=${API_KEY}`,
       { method: "DELETE" }
     );
 
-    return await response.json();
   } catch (e) {
     console.log(e);
   }
